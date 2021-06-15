@@ -178,3 +178,115 @@ select, input, option{
 .conocenos{
     padding: 5%;  
 }
+@media only screen and (max-width: 600px){
+    .encabezado{
+        display: flex;
+        align-items: center;
+        background-color: #e3c8c1;
+        justify-content: space-between;
+        margin: 0 -1%; 
+        margin-bottom: 5%;
+        padding: 2%;  
+        width: 90%;
+    }
+       
+    header label{
+        display: block;
+    }  
+    .encabezadoNav ul{
+        flex-direction: column;
+    }
+    h2{
+        display: flex;
+        height: 100%;
+        width: 85%;
+        justify-content: center;
+        margin: 10px;
+        text-transform: uppercase;
+        margin-top: 5%;
+    }
+    h3{
+        width: 85%;
+        text-align: center;
+        margin-top: 2%;
+    }
+    .contGaleria{   
+        height:95%;
+        margin: 1rem;
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+    .galeria{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 85%;
+        margin-bottom: 5%;
+    }
+    .info{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "embarazo recienNacido"" paisajismo institucional" "deportiva gastronomica";
+        width: 85%;
+        text-align: justify;
+        font-size: 15px;
+        line-height: 1.5em; 
+        margin: 0 auto;
+    }
+    .info p{
+        margin: 1rem;
+        text-align: justify;
+        
+    }
+    .imagFondo{
+        display:flex;
+        flex-direction: column;
+        width: 85%;
+        justify-content: center;
+        flex-wrap: nowrap;     
+     }
+    .imagFondo img{
+        width: 200px;
+        margin: 0 auto;
+    }           
+
+    .redes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;        
+        justify-content: center;
+        align-items: center ;
+        width: 90%;
+        }
+        
+    .redes i{
+            padding: 5px;   
+        }
+        
+    .redes span, .redes p{
+            padding: 7px;
+        }
+}
+
+@media only screen and (min-width: 600px){
+    
+    
+}
+@media only screen and (max-width: 780px){
+   
+}
+
+@media only screen and (min-width: 992px){
+
+    .imagFondo img:hover{
+        transform: scale(1.4,1.4);
+        transition: all 2s;
+    }
+}
+@media only screen and (min-width: 1200px){                       
+    .imagFondo img:hover{
+        transform: scale(1.4,1.4);
+        transition: all 2s;
+    }
+}
