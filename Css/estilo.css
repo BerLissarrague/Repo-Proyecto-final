@@ -41,8 +41,8 @@ body{
 }
 
 .imgLogo{   
-    width: 100px;
-    height: 100px;  
+    width: 150px;
+    height: 150px;  
 }
 .encabezadoNav{ 
     width: 30%;
@@ -61,11 +61,12 @@ body{
 .encabezadoNav ul li:hover{ 
     text-decoration: underline 2px solid;
 }
- .contGaleria{   
+ .contGaleria{ 
+    width: 90%;  
     height:100%;
     margin: 3rem;
     margin-top: 0%;
-    margin-bottom: 2%;
+    margin: 0 auto 4% auto;
 }
 .galeria{
     display: grid;
@@ -73,8 +74,9 @@ body{
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 2%;
     grid-row-gap: 2%;
-    width: 95%;
+    width: 100%;
     margin-bottom: 5%;
+  
 }
 .galeria img{
     width: 100%;
@@ -120,6 +122,7 @@ body{
     grid-template-columns: repeat(3, 1fr);
     height:100%;
     margin: 3rem;
+  
 }
 
 .imagFondo img{
