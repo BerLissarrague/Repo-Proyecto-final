@@ -11,9 +11,7 @@
     color:#ffff;
     text-decoration: none;  
     box-sizing: border-box; 
- 
 }
-
 
 h2{
     text-align: center;
@@ -23,81 +21,49 @@ h2{
 }
 
 h3{
+    text-align: center;    
     text-transform:capitalize;
 }
 
 body{
-    width:100%;
-    height: auto;
+    width: auto;
     padding:1%;
-    
-    background-image: linear-gradient(to bottom, #e3c8c1, #caaba3,#885c5b) ;  
-    background-repeat: no-repeat;
-    
+    background-image: linear-gradient(to bottom, #e3c8c1, #caaba3,#885c5b);
 }
 
-.encabezado{
-    display: flex;
-    align-items: center;
-    background-color: #e3c8c1;
-    justify-content: space-between;
-    margin: 0 -1%; 
-    margin-bottom: 5%;
-    padding: 2%;  
+.imgLogo{   
+ width: 10%;
 }
 
-
-.navbar-brand, .navbar-toggler{   
-    max-width: 8%;
-    min-width: 20px;
-}
-
-.imgLogo, .navbar-toggler img{ 
-    width: 100%;  
-    height: 100%;
-    min-width: 20px;
-}
-
-.navbar-toggler img{
-    max-width: 30px;
-}
-
-.encabezadoNav{ 
-    width: 30%;
-    margin: 2%;
+.navbar-brand{
+    width: 80%;
 }
 
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
-        color: #ffff;
-    }
-.navbar-light .navbar-nav .nav-link{
-    margin-right: 5%;
-    float: right;
     color: #ffff;
+    border: none;  
+    padding-right: 5%;
+    float: right
+}
+.menuham{
+    width: 100%;    
 }
 
+.navbar-light .navbar-nav .nav-link{
+    color:#ffff;
+    float: right;
+    padding-right: 5%;
+   }
+.navbar-expand-lg .navbar-collapse{
+       flex-direction: row-reverse;
+       border: none;
+   }
 .navbar-light .navbar-toggler {
     color: transparent;
-    border-color:transparent;
-          
-}
-.navbar-collapse{
-    flex-direction: row-reverse;
-}
-.encabezadoNav ul{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-}
-.encabezadoNav li{
-    font-size: 20px;
-    margin: 1%;
-}    
-.encabezadoNav ul li:hover{ 
-    text-decoration: underline 2px solid;
-}
- .contGaleria{   
+    border-color: transparent;
+    width: 8%;
+   }
+.contGaleria{   
     height:90%;
     margin: 3rem;
     margin-top: 0%;
@@ -160,13 +126,13 @@ body{
     flex-direction: row;
     justify-content:space-between;    
     width: 90%;
-    margin:0 auto;
-}
-.imagFondo img{
-    width: 450px; 
-    padding: 1%;     
-}
+    margin:0 auto;}
 
+   
+.imagFondo img{
+    width: 33%; 
+    padding: 1%; margin: 0 auto;   
+}    
 
 
 .redes{
@@ -181,7 +147,6 @@ width: 100%;
 
 .redes i{
     padding: 10px;   
-    color: #ffff
 }
 
 .redes span, .redes p{
@@ -201,28 +166,110 @@ select, input, option{
 }
 /*Pagina de Precios*/
 
-.tabla{
-    width:100%;
-    height:auto ;
-    margin: 3rem auto;
-}
-
 .tabla, th, td{    
     text-align: center;
     border: 3px solid ;
     border-collapse: collapse; 
     position: relative;
     padding: 1%;
-}     
+}    
+.table {margin-top: 10%; 
+    margin-bottom: 10%}
+    
 /*Pagina de Contacto*/
-.conocenos{
-    padding: 5%;  
-}
+    
+    
 @media only screen and (max-width: 600px){
-    *{font-size:  10px;}
+    *{font-size: 10px;}
     body {
         width: auto;
         padding: 0%;
+    }
+        
+    h2{
+        display: flex;
+        height: 100%;
+        width: 90%;
+        justify-content: center;
+        margin: 10px;
+        text-transform: uppercase;
+        margin-top: 5%;
+    }
+    h3{
+        width: 90%;
+        text-align: center;
+        margin-top: 2%;
+    }
+    
+    .contGaleria{   
+        height:95%;       
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+    .galeria{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    .galeria img{
+        padding: 2%;
+    }
+    .info{
+        display: flex;
+        flex-direction: column ;
+        width: 80%;
+        text-align: justify;
+        
+        line-height: 1.5em; 
+        margin: 3rem;
+    }
+    .info p{
+        margin: 1rem;
+        text-align: justify;
+        
+    }
+    .imagFondo{
+        width: 90%;
+          
+    }
+    .fotoFondo{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        justify-content: center;
+        align-items: center;   
+    }
+    .fotoFondo img{
+        width: 80%;
+    }
+
+    .redes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;        
+        justify-content: center;       
+        width: 90%;
+        margin: 1rem;
+        }
+        
+    .redes i{
+            padding: 5px;   
+        }
+        
+    .redes span, .redes p{
+            padding: 7px;
+        
+        }
+}
+@media only screen and (min-width: 600px) and (max-width: 780px) { 
+    body {
+        width: auto;
+        padding: 0%;
+    }
+    .galeria img{
+        padding: 2%;
     }
     .encabezado{
         display: flex;
@@ -267,17 +314,16 @@ select, input, option{
         width: 100%;
         margin-bottom: 5%;
     }
-    .galeria img{
-        padding: 2%;
-      }
     .info{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "embarazo recienNacido"" paisajismo institucional" "deportiva gastronomica";
         width: 85%;
         text-align: justify;
         font-size: 15px;
         line-height: 1.5em; 
-        margin: 0 auto;
+        margin: 3rem;
     }
     .info p{
         margin: 1rem;
@@ -296,7 +342,7 @@ select, input, option{
         align-items: center;   
     }
     .fotoFondo img{
-        width: 75%;
+        width: 85%;
     }
 
     .redes{
@@ -316,104 +362,21 @@ select, input, option{
             padding: 7px;
         
         }
-        
-}
-@media only screen and (min-width: 600px) and (max-width: 768px) { 
-  
-
-h2{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    margin: 10px;
-    text-transform: uppercase;
-    margin-top: 5%;
-}
-h3{
-    width: 100%;
-    text-align: center;
-    margin-top: 2%;
-}
-.contGaleria{   
-    height:95%;       
-    margin-top: 0%;
-    margin-bottom: 0%;
-}
-.galeria{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 5%;
-}
-.galeria img{
-    padding: 2%;
-  }
-.info{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "embarazo recienNacido"" paisajismo institucional" "deportiva gastronomica";
-    width: 90%;
-    text-align: justify;
-    font-size: 15px;
-    line-height: 1.5em; 
-    margin: 0 auto;
-}
-.info p{
-    margin: 1rem;
-    text-align: justify;
     
 }
-.imagFondo{
-    width: 90%;
-      
-}
-.fotoFondo{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    justify-content: center;
-    align-items: center;   
-}
-.fotoFondo img{
-    width: 400px;
-}
-
-.redes{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;        
-    justify-content: center;       
-    width: 90%;
-    margin: 1rem;
-    }
-    
-.redes i{
-        padding: 5px;   
-    }
-    
-.redes span, .redes p{
-        padding: 7px;
-    
-}  
-
-}
-
-@media only screen and (min-width: 768px) and (max-width: 992px){
-  
+     
+@media only screen and (min-width: 780px) and (max-width: 992px){
     h2{
         display: flex;
         height: 100%;
-        width: 100%;
+        width: 90%;
         justify-content: center;
         margin: 10px;
         text-transform: uppercase;
         margin-top: 5%;
     }
     h3{
-        width: 100%;
+        width: 90%;
         text-align: center;
         margin-top: 2%;
     }
@@ -422,51 +385,70 @@ h3{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas: "embarazo recienNacido"" paisajismo institucional" "deportiva gastronomica";
-        width: 90%;
+        width: 85%;
         text-align: justify;
         font-size: 15px;
         line-height: 1.5em; 
-        margin: 0 auto;
+        margin: 3rem;
     }
     .info p{
         margin: 1rem;
-        text-align: justify;
-        
-    }
-    .imagFondo{
-        width: 90%;
-          
-    }
-    .fotoFondo{
+        text-align: justify;}
+    .fotoFondo img{
+        width: 33%;}
+    
+   
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    h2{
         display: flex;
-        flex-direction: column;
+        height: 100%;
         width: 90%;
         justify-content: center;
-        align-items: center;   
+        margin: 10px;
+        text-transform: uppercase;
+        margin-top: 5%;
     }
-       
-}
-@media only screen and (min-width: 992px){
-     .imagFondo img:hover{
-        transform: scale(1.4,1.4);
+    h3{
+        width: 90%;
+        text-align: center;
+        margin-top: 2%;
+    }
+    .info{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "embarazo recienNacido"" paisajismo institucional" "deportiva gastronomica";
+        width: 85%;
+        text-align: justify;
+        font-size: 15px;
+        line-height: 1.5em; 
+        margin: 3rem;
+    }
+    .info p{
+        margin: 1rem;
+        text-align: justify;}
+    .fotoFondo img{
+        width: 33%;}
+
+    .imagFondo img:hover{
+        transform: scale(1.4);
         transition: all 2s;
     }
-
-    .imagFondo img{
-        width: 33%;
-    }
-    
-    
 }
-
-/*Pagina de Galeria*/
-.carousel{ 
-    width: 100%;
-    margin: auto 0;
+@media only screen and (min-width: 1200px){  
+    .fotoFondo img{
+        width: 33%;}                     
+    .imagFondo img:hover{
+        transform: scale(1.4);
+        transition: all 2s;
+    }
+}
+.carousel{
     padding: 2%;
 }
-.conteconta{
-    width: 90%;
-   margin: 0 auto;
+.d-block{      
+    margin: 0 auto;
 }
-
+.navbar-light .navbar-toggler-icon{ color: #ffff;}
