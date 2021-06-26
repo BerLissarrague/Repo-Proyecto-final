@@ -17,22 +17,34 @@ h2{
     text-align: center;
     margin: 10px;
     text-transform: uppercase;
+    margin: 0 auto;/*para centrar*/
     margin-bottom: 2%;
+    margin-top: 10%; /*AGREGUE ESTE MARGIN PARA SEPARARLO DE LA NAVBAR*/
 }
 
 h3{
+    margin: 0 auto;/*para centrar*/
     text-align: center;    
     text-transform:capitalize;
+    opacity: 50%; /*LE BAJE LA OPACIDAD PARA QUE NO RESALTE TANTO Y NO COMPITA CON EL H2*/
 }
 
 body{
     width: auto;
     padding:1%;
     background-image: linear-gradient(to bottom, #e3c8c1, #caaba3,#885c5b);
+    min-height: 940px; /*AGREGUE ESTO PARA SOLUCIONAR EL RECTANGULO DE ABAJO, COMO MINIMO MIDE LO QUE MIDE EL ALTO DE LA PANTALLA*/
 }
 
 .imgLogo{   
- width: 10%;
+ width: 15%;
+ max-width: 95px;
+}
+
+.navbar{
+    background-color: #e4c9c4; /*AGREGUE BACKGROUND*/
+    margin: 0 -1%; /*PARA QUE OCUPE TODO EL ANCHO POR EL PADDING DE 1% DEL BODY*/
+    margin-bottom: 5px;
 }
 
 .navbar-brand{
@@ -49,6 +61,12 @@ body{
     width: 100%;    
 }
 
+
+#navbarNav {
+    background-color: #e4c9c4;
+    margin-right: -2%;
+    padding-right: 3%;
+}
 .navbar-light .navbar-nav .nav-link{
     color:#ffff;
     float: right;
@@ -61,8 +79,12 @@ body{
 .navbar-light .navbar-toggler {
     color: transparent;
     border-color: transparent;
-    width: 8%;
+    width: 10%;/*CAMBIE DE 8% A 10% PORQUE ERA MUY CHICO EN ALGUNOS CASOS*/
+    min-width: 40px;/*AGREGUE ESTO PARA QUE EN PANTALLA CHICA NO DESAPAREZCA DE LO CHICO QUE SE HACE*/
+    max-width: 75px;/*PARA QUE NO QUEDE EXESIVAMENTE GRANDE*/
    }
+   /*AL MENU HAMBURGUESA EN LOS HTML LO CAMBIE POR UN DIV EN LUGAR DE SPAN PORQUE CON RESPONSIVE TE ROMPIA POR UNA MEDIA QUERY DONDE 
+   MODIFICABAS EL TAMAÑO DEL TEXTO Y ESO AL SPAN LO AFECTA*/
 .contGaleria{   
     height:90%;
     margin: 3rem;
@@ -76,7 +98,7 @@ body{
     grid-column-gap: 2%;
     grid-row-gap: 2%;
     width: 90%;
-    margin: 0 auto 4% auto;
+    margin: 10% auto 4% auto;
 }
 .galeria img{
     width: 100%;
@@ -115,8 +137,6 @@ body{
     margin: 2rem;
     text-align: left;
 }
-
-
 .imagFondo{
     width: 90%;
     margin: 2% auto;
@@ -126,13 +146,15 @@ body{
     flex-direction: row;
     justify-content:space-between;    
     width: 90%;
-    margin:0 auto;}
-
+    margin:0 auto;
+    margin-bottom: 10%;
+}
    
 .imagFondo img{
     width: 33%; 
-    padding: 1%; margin: 0 auto;   
-}    
+    padding: 1%;
+    margin: 0 auto;   
+}   
 
 
 .redes{
@@ -173,25 +195,17 @@ select, input, option{
     position: relative;
     padding: 1%;
 }    
-.table {margin-top: 10%; 
-    margin-bottom: 10%}
-    
+
 /*Pagina de Contacto*/
     
-    
+
+
 @media only screen and (max-width: 600px){
-    *{font-size: 10px;}
-    body {
-        width: auto;
-        padding: 0%;
-    }
-        
-    h2{
-        display: flex;
+      h2{
+        font-size: 15px;
         height: 100%;
         width: 90%;
         justify-content: center;
-        margin: 10px;
         text-transform: uppercase;
         margin-top: 5%;
     }
@@ -199,6 +213,12 @@ select, input, option{
         width: 90%;
         text-align: center;
         margin-top: 2%;
+    }
+    form, h3{
+        font-size: 13px;  
+    }
+    p{
+        font-size: 10px;  
     }
     
     .contGaleria{   
@@ -261,13 +281,13 @@ select, input, option{
     .redes span, .redes p{
             padding: 7px;
         
-        }
+        }  
+    .table{/*agregue*/
+        font-size: 9px;
+    };        
 }
 @media only screen and (min-width: 600px) and (max-width: 780px) { 
-    body {
-        width: auto;
-        padding: 0%;
-    }
+   
     .galeria img{
         padding: 2%;
     }
@@ -289,13 +309,6 @@ select, input, option{
         flex-direction: column;
     }
     h2{
-        display: flex;
-        height: 100%;
-        width: 90%;
-        justify-content: center;
-        margin: 10px;
-        text-transform: uppercase;
-        margin-top: 5%;
     }
     h3{
         width: 90%;
@@ -371,7 +384,6 @@ select, input, option{
         height: 100%;
         width: 90%;
         justify-content: center;
-        margin: 10px;
         text-transform: uppercase;
         margin-top: 5%;
     }
@@ -406,7 +418,6 @@ select, input, option{
         height: 100%;
         width: 90%;
         justify-content: center;
-        margin: 10px;
         text-transform: uppercase;
         margin-top: 5%;
     }
@@ -419,8 +430,8 @@ select, input, option{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: "embarazo recienNacido"" paisajismo institucional" "deportiva gastronomica";
-        width: 85%;
+        grid-template-areas: "embarazo recienNacido" "paisajismo institucional" "deportiva gastronomica";
+        width: 90%;
         text-align: justify;
         font-size: 15px;
         line-height: 1.5em; 
