@@ -44,48 +44,61 @@
       </div>
     </div>
   </nav>
-  <form action="Contacto">
-    <fieldset>
-      <legend>Datos</legend>
-      <label>Nombre <input type="text" name="nombre" placeholder="Nombre" /></label>
-      <br>
-      <br>
-      <label>Ingresa tu Email <input type="email" name="email" placeholder="Tuemail@ejemplo.com" /></label>
-    </fieldset>
-    <br>
-    <br>
-    <fieldset>
-      <legend>Nos conociste por... </legend>
-      <select type="Nos conocio por..">
-        <option value="Facebook">Facebook</option>
-        <option value="Instagram">Instagram</option>
-        <option value="Otro">Otro</option>
 
+  <form>
+
+    <div class="form-group">
+      <label for="full_name_id" class="control-label">Nombre</label>
+      <input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="Nombre">
+    </div>
+
+    <div class="form-group">
+      <label for="street1_id" class="control-label">E-mail</label>
+      <input type="text" class="form-control" id="street1_id" name="street1" placeholder="E-mail">
+    </div>
+
+    <div class="form-group">
+      <label for="city_id" class="control-label">Ciudad</label>
+      <input type="text" class="form-control" id="city_id" name="city" placeholder="Tandil">
+    </div>
+
+    <div class="form-group">
+      <label for="street2_id" class="control-label">Direccion</label>
+      <input type="text" class="form-control" id="street2_id" name="street2" placeholder="Direccion">
+    </div>
+
+    <div class="form-group">
+      <label for="state_id" class="control-label">Donde nos Conociste</label>
+      <select class="form-control" id="state_id">
+        <option value="otro"></option>
+        <option value="Fb">Facebook</option>
+        <option value="Inst">Instagram</option>
+        <option value="otro">Otro</option>
       </select>
-    </fieldset>
-    <br>
-    <br>
-    <fieldset>
-      <legend>Novedades</legend>
-      <p> Desea recibir el Novedades <input type="checkbox" name="acepta" value="1"></p>
+    </div>
 
-    </fieldset>
-    <br>
-    <br>
-    <fieldset>
-      <legend>Comentarios</legend>
-      <section>
-        <h4>Envianos tu comentario</h4>
+    <div class="form-group">
+      <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+      <div class="col-md-8">
+        <textarea class="form-control" id="message" name="message" placeholder="Enter su mensaje" rows="7"></textarea>
+      </div>
+    </div>
 
-        <textarea rows="5" cols="30"></textarea><br>
+    <div class="form-group btn-contacto">
+      <div class="checkbox">
+        <label><input type="checkbox"> Suscribirse</label>
+      </div>
+      <button type="submit" class="btn btn-dark">Subir</button>
+      <button type="clean" class="btn btn-dark">Limpiar</button>
+    </div>
 
-        <input type="submit" value="Enviar " />
-        <input type="reset" value="Limpiar" />
-      </section>
-    </fieldset>
   </form>
+
+
+
+
+  <!--Parte 5-->
   <footer class="footer">
-    <!--Parte 5-->
     <div class="redes">
       <span> Copyright © </span>
       <a href="https://www.instagram.com/calma.fotografia/" target="_blank"><i class="fab fa-instagram"></i></a>
