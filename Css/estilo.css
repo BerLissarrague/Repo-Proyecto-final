@@ -354,7 +354,7 @@ select, input, option{
     
 }
      
-@media only screen and (min-width: 780px){
+@media only screen and (min-width: 780px) and (max-width: 992px){
     .info{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
