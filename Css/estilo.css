@@ -14,51 +14,36 @@
 }
 /* Encabezados */
 h2{
-    text-align: center;
-    margin: 10px;
+    text-align: center;   
     text-transform: uppercase;
-    margin: 0 auto;/*para centrar*/
-    margin-bottom: 2%;
-    margin-top: 10%; /*AGREGUE ESTE MARGIN PARA SEPARARLO DE LA NAVBAR*/
+    margin: 2%; 
 }
 
 h3{
-    margin: 0 auto;/*para centrar*/
+    margin: 0 auto;
     text-align: center;    
     text-transform:capitalize;
-    opacity: 50%; /*LE BAJE LA OPACIDAD PARA QUE NO RESALTE TANTO Y NO COMPITA CON EL H2*/
+    opacity: 50%;
 }
 
 
 body{
     width: auto;
-    padding:1%;
-    background-image: linear-gradient(to bottom, #e3c8c1, #caaba3,#885c5b);
-    min-height: 940px; /*AGREGUE ESTO PARA SOLUCIONAR EL RECTANGULO DE ABAJO, COMO MINIMO MIDE LO QUE MIDE EL ALTO DE LA PANTALLA*/
+    background-image: linear-gradient(to bottom, #e3c8c1, #caaba3,#885c5b);    
 }
 /*  Nav */
 
-#navbarNav {
-    background-color: #e4c9c4;
-    margin-right: -2%;
+.imgLogo{   
+    width: 90px;
+    height: 90px;
+}
+#navbarNav{ 
     padding-right: 3%;
 }
-
-.imgLogo{   
- width: 15%;
- max-width: 95px;
-}
-
 .navbar{
-    background-color: #e4c9c4; /*AGREGUE BACKGROUND*/
-    margin: 0 -1%; /*PARA QUE OCUPE TODO EL ANCHO POR EL PADDING DE 1% DEL BODY*/
+    background-color: #e4c9c4; 
     margin-bottom: 5px;
 }
-
-.navbar-brand{
-    width: 80%;
-}
-
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
     color: #ffff;
     border: none;  
@@ -78,18 +63,16 @@ body{
     font-size: 12px;;
     color: transparent;
     border-color: transparent;
-    width: 10%;/*CAMBIE DE 8% A 10% PORQUE ERA MUY CHICO EN ALGUNOS CASOS*/
-    min-width: 40px;/*AGREGUE ESTO PARA QUE EN PANTALLA CHICA NO DESAPAREZCA DE LO CHICO QUE SE HACE*/
-    max-width: 75px;/*PARA QUE NO QUEDE EXESIVAMENTE GRANDE*/
 }
-   /*AL MENU HAMBURGUESA EN LOS HTML LO CAMBIE POR UN DIV EN LUGAR DE SPAN PORQUE CON RESPONSIVE TE ROMPIA POR UNA MEDIA QUERY DONDE 
-   MODIFICABAS EL TAMAÑO DEL TEXTO Y ESO AL SPAN LO AFECTA*/
 .navbar-light .navbar-toggler-icon{
     color: #ffff;
 }
-.menuham{
+.menuham-container {
     width: 100%;
 }
+.menuham{
+    width: 50px;
+ }
 
 /* Galeria*/
 
@@ -161,7 +144,6 @@ body{
     justify-content:space-between;    
     width: 90%;
     margin:0 auto;
-    margin-bottom: 10%;
 }
    
 .imagFondo img{
@@ -212,8 +194,11 @@ select, input, option{
 }     
 
 /*Pagi na de Contacto*/
-.btn-contacto{ 
-    padding: 2% 0;
+.form-control{
+    width: 80%;
+}
+.form-container{
+    padding: 2%
 }
       
 /* Pagina de Galeria */
@@ -223,11 +208,13 @@ select, input, option{
 .d-block{      
     margin: 0 auto;
 }
-
-
+/* Pagina de Galeria */
+.fluid2 {
+    margin:2% 8%;
+}
 @media only screen and (max-width: 600px){
     h2{
-        font-size: 15px;
+        font-size: 20px;
         height: 100%;
         width: 90%;
         justify-content: center;
@@ -240,10 +227,10 @@ select, input, option{
         margin-top: 2%;
     }
     form, h3{
-        font-size: 13px;  
+        font-size: 16px;  
     }
     p{
-        font-size: 10px;  
+        font-size: 13px;  
     }
     
     .contGaleria{   
@@ -267,7 +254,7 @@ select, input, option{
         width: 80%;
         text-align: justify;        
         line-height: 1.5em; 
-        margin: 3rem;
+      
     }
     .info p{
         margin: 1rem;
@@ -308,7 +295,10 @@ select, input, option{
     }  
     .table{/*agregue*/
         font-size: 9px;
-    };        
+    }
+    .form-control{
+        width: 100%;
+    }
 }
 @media only screen and (min-width: 600px) and (max-width: 780px) { 
                
@@ -352,6 +342,7 @@ select, input, option{
         width: 85%;
     }
     
+
 }
      
 @media only screen and (min-width: 780px) and (max-width: 992px){
