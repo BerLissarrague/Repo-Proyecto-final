@@ -133,22 +133,7 @@ body{
 }
 
 /* imagenes pie de pagina*/
-.imagFondo{
-    width: 90%;
-    margin: 2% auto;
-}
-.fotoFondo{
-    display: flex;  
-    flex-direction: row;
-    justify-content:space-between;    
-    width: 90%;
-    margin:0 auto;
-}
-.imagFondo img{
-    width: 33%; 
-    padding: 1%;
-    margin: 2% auto;   
-}   
+
 
 /* Footer */
 

@@ -26,7 +26,8 @@ h3 {
 
 body {
   width: auto;
-  background-image: linear-gradient(to bottom, #e3c8c1, #caaba3, #885c5b); }
+  background-image: linear-gradient(to bottom, #e3c8c1, #caaba3, #885c5b);
+  min-height: 960px; }
 
 /*  Nav */
 .imgLogo {
@@ -94,7 +95,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas: "embarazo recienNacido paisajismo" "institucional deportiva gastronomica";
-  width: 90%;
+  width: 85%;
   text-align: center;
   font-size: 20px;
   line-height: 1.5em;
@@ -132,7 +133,10 @@ body {
 
 /*Mixin*/
 .fotoFondo {
-  @i justify-content:space-between;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
   margin: 0 auto; }
 
 /* Footer */
@@ -146,7 +150,7 @@ body {
   align-items: center; }
   .redes i {
     padding: 10px; }
-  .redes span, .redes p {
+  .redes span {
     padding: 15px; }
   .redes p {
     padding: 15px; }
@@ -189,8 +193,9 @@ body {
   h3 {
     width: 90%;
     text-align: center;
-    margin-top: 2%; }
-  form, h3 {
+    margin-top: 2%;
+    font-size: 16px; }
+  form {
     font-size: 16px; }
   p {
     font-size: 13px; }
@@ -204,17 +209,17 @@ body {
     width: 100%;
     justify-content: center;
     margin-bottom: 5%; }
-  .galeria img {
-    padding: 2%; }
+    .galeria img {
+      padding: 2%; }
   .info {
     display: flex;
     flex-direction: column;
     width: 80%;
     text-align: justify;
     line-height: 1.5em; }
-  .info p {
-    margin: 1rem;
-    text-align: justify; }
+    .info p {
+      margin: 1rem;
+      text-align: justify; }
   .imagFondo {
     width: 90%; }
   .fotoFondo {
@@ -223,8 +228,8 @@ body {
     width: 90%;
     justify-content: center;
     align-items: center; }
-  .fotoFondo img {
-    width: 80%; }
+    .fotoFondo img {
+      width: 80%; }
   .redes {
     display: flex;
     flex-direction: row;
@@ -232,10 +237,12 @@ body {
     justify-content: center;
     width: 90%;
     margin: 1rem; }
-  .redes i {
-    padding: 5px; }
-  .redes span, .redes p {
-    padding: 7px; }
+    .redes i {
+      padding: 5px; }
+    .redes span {
+      padding: 7px; }
+    .redes p {
+      padding: 7px; }
   .table {
     font-size: 9px; }
   .form-control {
@@ -260,19 +267,19 @@ body {
     font-size: 15px;
     line-height: 1.5em;
     margin: 3rem; }
-  .info p {
-    margin: 1rem;
-    text-align: justify; }
+    .info p {
+      margin: 1rem;
+      text-align: justify; }
   .imagFondo {
     width: 90%; }
+    .imagFondo img {
+      width: 85%; }
   .fotoFondo {
     display: flex;
     flex-direction: column;
-    width: 90%;
-    justify-content: center;
-    align-items: center; }
-  .fotoFondo img {
-    width: 85%; } }
+    width: 95%;
+    justify-content: space-between;
+    align-items: center; } }
 
 @media only screen and (min-width: 780px) and (max-width: 992px) {
   .info {
@@ -285,11 +292,9 @@ body {
     font-size: 15px;
     line-height: 1.5em;
     margin: 3rem; }
-  .info p {
-    margin: 1rem;
-    text-align: justify; }
-  .fotoFondo img {
-    width: 33%; } }
+    .info p {
+      margin: 1rem;
+      text-align: justify; } }
 
 @media only screen and (min-width: 992px) {
   .imagFondo img:hover {
