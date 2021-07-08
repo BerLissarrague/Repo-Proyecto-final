@@ -31,7 +31,8 @@ h3{
 body{
     width: auto;
     background-image: linear-gradient(to bottom, #e3c8c1, #caaba3,#885c5b);
-    min-height: 960px;    
+    background-repeat: no-repeat;
+    //min-height: 940px;    
 }
 /*  Nav */
 
@@ -57,7 +58,7 @@ body{
     float: right;
     padding-right: 5%;
 }
-.navbar-expand-lg .navbar-collapse{
+.navbar-expand-sm .navbar-collapse{
     flex-direction: row-reverse;
     border: none;
 }
@@ -73,24 +74,24 @@ body{
     width: 100%;
 }
 .menuham{
-    width: 50px;
+    width: 40px;
  }
 
 /* Galeria*/
 
 .contGaleria{   
-    height:90%;
+    height:$ancho;
     margin: 3rem;
     margin-top: 0%;
     margin-bottom: 2%;
 }
 .galeria{
-    display: grid;
+    display: $grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 2%;
     grid-row-gap: 2%;
-    width: 90%;
+    width: $ancho;
     margin: 10% auto 4% auto;
  img{
     width: 100%;
@@ -101,7 +102,7 @@ body{
 /* Especialidades*/ 
 
 .info{
-    display: grid;
+    display: $grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "embarazo recienNacido paisajismo""institucional deportiva gastronomica";
@@ -177,6 +178,9 @@ p{
 }
 
 /*Pagina de Contactos*/
+.opciones{
+    color:#212529;
+}
 
 /*Pagina de Precios*/
 .tabla{    
@@ -196,7 +200,7 @@ td{
 
 /*Pagi na de Contacto*/
 .form-control{
-    width: 80%;
+    width: 50%;
 }
 .form-container{
     padding: 2%
@@ -312,10 +316,10 @@ td{
         justify-content: center;
         width: 100%;
         margin-bottom: 5%;
-    }
-    .galeria img{
+    img{
         padding: 2%;
     }
+}
     .info{
         display: grid;
         grid-template-columns: repeat(2, 1fr);

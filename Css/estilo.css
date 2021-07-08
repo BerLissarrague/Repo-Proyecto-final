@@ -27,7 +27,7 @@ h3 {
 body {
   width: auto;
   background-image: linear-gradient(to bottom, #e3c8c1, #caaba3, #885c5b);
-  min-height: 960px; }
+  min-height: 940px; }
 
 /*  Nav */
 .imgLogo {
@@ -52,7 +52,7 @@ body {
   float: right;
   padding-right: 5%; }
 
-.navbar-expand-lg .navbar-collapse {
+.navbar-expand-sm .navbar-collapse {
   flex-direction: row-reverse;
   border: none; }
 
@@ -68,7 +68,7 @@ body {
   width: 100%; }
 
 .menuham {
-  width: 50px; }
+  width: 40px; }
 
 /* Galeria*/
 .contGaleria {
@@ -156,6 +156,9 @@ body {
     padding: 15px; }
 
 /*Pagina de Contactos*/
+.opciones {
+  color: #212529; }
+
 /*Pagina de Precios*/
 .tabla, th, td {
   text-align: center;
@@ -166,7 +169,7 @@ body {
 
 /*Pagi na de Contacto*/
 .form-control {
-  width: 80%; }
+  width: 50%; }
 
 .form-container {
   padding: 2%; }
@@ -255,8 +258,8 @@ body {
     justify-content: center;
     width: 100%;
     margin-bottom: 5%; }
-  .galeria img {
-    padding: 2%; }
+    .galeria img {
+      padding: 2%; }
   .info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
