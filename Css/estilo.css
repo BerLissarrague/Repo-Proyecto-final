@@ -46,7 +46,7 @@ body {
   background-color: #e4c9c4;
   margin-bottom: 5px; }
 
-.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show > .nav-link {
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show.nav-link {
   color: #ffff;
   border: none;
   padding-right: 5%;
