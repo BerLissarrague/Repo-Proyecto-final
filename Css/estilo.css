@@ -136,7 +136,7 @@ body {
     width: 33%;
     padding: 1%;
     margin: 2% auto;
-    border-radius: 7%; }
+    border-radius: 2%; }
 
 /*Mixin*/
 .fotoFondo {
@@ -162,10 +162,6 @@ body {
   .redes p {
     padding: 15px; }
 
-/*Pagina de Contactos*/
-.opciones {
-  color: #212529; }
-
 /*Pagina de Precios*/
 .tabla, th, td {
   text-align: center;
@@ -175,6 +171,9 @@ body {
   padding: 1%; }
 
 /*Pagi na de Contacto*/
+.opciones {
+  color: #212529; }
+
 .form-control {
   width: 50%; }
 
@@ -190,10 +189,11 @@ body {
 .d-block {
   margin: 0 auto; }
 
-/* Pagina de Galeria */
+/* Pagina de conocenos */
 .fluid2 {
-  margin: 2% 8%; }
+  margin: 4%; }
 
+/* Medias Query*/
 @media only screen and (max-width: 600px) {
   h2 {
     font-size: 20px;

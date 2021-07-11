@@ -145,27 +145,26 @@ body{
 .imagFondo{
     width: 90%;
     margin: 2% auto;
-    
-
     img{
         width: 33%; 
         padding: 1%;
         margin: 2% auto;
-        border-radius: 7%; 
-    }   
-    
+        border-radius: 2%; 
+    }
 }
-/*Mixin*/
+    /*Mixin*/
 @mixin uno($flex,$fila,$ancho){
-   display: $flex;
-   flex-direction: $fila;
-   width: $ancho;
+    display: $flex;
+    flex-direction: $fila;
+    width: $ancho;
+ }
+ .fotoFondo{
+     @include uno(flex,row,90% );
+     justify-content:space-between;    
+     margin:0 auto;    
 }
-.fotoFondo{
-    @include uno(flex,row,90% );
-    justify-content:space-between;    
-    margin:0 auto;
-}
+
+
 /* Footer */
 
 .redes{
@@ -175,20 +174,15 @@ body{
     justify-content: center;
     align-items: center ;
     
- i{
+    i{
     padding: 10px;   
 }
-span{
+    span{
     padding: 15px;
 }
-p{
+    p{
     padding: 15px;
-}
-}
-
-/*Pagina de Contactos*/
-.opciones{
-    color:#212529;
+} 
 }
 
 /*Pagina de Precios*/
@@ -199,7 +193,6 @@ p{
     border-collapse: collapse; 
     position: relative;
     padding: 1%;
-       
 } 
 th{
     @extend.tabla;
@@ -209,6 +202,9 @@ td{
 }  
 
 /*Pagi na de Contacto*/
+.opciones{
+    color:#212529;
+}
 .form-control{
     width: 50%;
 }
@@ -218,15 +214,19 @@ td{
 /* Pagina de Galeria */
 .carousel{
     padding: 2%;
-    img{border-radius: 2%;}
+ img{
+    border-radius: 2%;
+}
 }
 .d-block{      
     margin: 0 auto;
 }
-/* Pagina de Galeria */
-.fluid2 {
-    margin:2% 8%;
-}
+/* Pagina de conocenos */
+.fluid2{
+    margin:4%
+  }
+
+/* Medias Query*/
 @media only screen and (max-width: 600px){
     h2{
         font-size: 20px;
@@ -304,18 +304,16 @@ td{
         
     i{
         padding: 5px;   
-    }
-        
-     span{
-        padding: 7px;
-        
+    }        
+    span{
+        padding: 7px;        
     } 
     p{
-         padding: 7px;        
+        padding: 7px;        
     } 
-} 
+    } 
     .table{
-         font-size: 9px;
+        font-size: 9px;
     }
     .form-control{
         width: 100%;
@@ -333,7 +331,7 @@ td{
         border-radius: 7%;
         padding: 2%;
     }
-}
+    }
     .info{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -348,14 +346,13 @@ td{
         margin: 1rem;
         text-align: justify;
     }
-}
+    }
     .imagFondo{
         width: 90%;
         img{ 
             border-radius: 7%;
             width: 85%;
         }
-               
     }
     .fotoFondo{
         display: flex;
@@ -365,8 +362,7 @@ td{
         align-items: center;   
     }
   
-}
-     
+}     
 @media only screen and (min-width: 780px) and (max-width: 992px){
     .info{
         display: grid;
@@ -378,13 +374,11 @@ td{
         font-size: 15px;
         line-height: 1.5em; 
         margin: 3rem;
-    
-    p{
+        p{
         margin: 1rem;
         text-align: justify;
     }
-}
-
+    }
 }
 @media only screen and (min-width: 992px) {
  
