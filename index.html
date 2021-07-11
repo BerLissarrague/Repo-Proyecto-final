@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +7,8 @@
     <!--fond Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <!--Css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="Css/estilo.css">
     <!--Google fond-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,19 +18,35 @@
 </head>
 
 <body>
-    <header class="encabezado">
-        <a href="index.html"><img src="imagenes/LOGOCALMA.jpg" alt="Logo" class="imgLogo"></a>
-        <nav class="encabezadoNav">
-            <ul>
-                <li><a href="index.html">Inicio</a> </li>
-                <li><a href="Precio.html">Precios</a> </li>
-                <li><a href="Conocenos.html">Conocenos</a> </li>
-                <li><a href="Contacto.html">Contacto</a> </li>
-                <li><a href="Galeria.html">Galeria</a> </li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparen">
+        <div class="container-fluid fluid1">
+            <a href="index.html" class="navbar-brand"><img src="imagenes/LOGOCALMA.jpg" alt="Logo" class="imgLogo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="menuham-container"><img src="imagenes/mhambu.png" alt="Logo" class="menuham"></div>
 
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Galeria.html">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Conocenos.html">Conocenos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Precio.html">Precio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <main class="contGaleria">
         <section>
             <div class="galeria">
@@ -40,7 +57,6 @@
             </div>
         </section>
     </main>
-
     <h2>mis especialidades</h2>
     <section class="info">
         <article class="institucional">
@@ -93,17 +109,19 @@
     </section>
 
 
+ <!--Parte 5-->
     <footer class="footer">
-        <!--Parte 5-->
-        <div class="redes">
+            <div class="redes">
             <span> Copyright © </span>
             <a href="https://www.instagram.com/calma.fotografia/" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com/calmanewborn" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <p>calmafotografia@gmail.com</p>
+            <i class="fas fa-envelope"></i>
         </div>
 
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

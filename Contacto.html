@@ -7,79 +7,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto</title>
   <!--fond Awesome-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <link rel="stylesheet" href="Css/estilo.css">
 </head>
 
 <body>
-  <header class="encabezado">
-    <a href="index.html"><img src="imagenes/LOGOCALMA.jpg" alt="Logo" class="imgLogo"></a>
-    <nav class="encabezadoNav">
-      <ul>
-        <li><a href="index.html">Inicio</a> </li>
-        <li><a href="Precio.html">Precios</a> </li>
-        <li><a href="Conocenos.html">Conocenos</a> </li>
-        <li><a href="Contacto.html">Contacto</a> </li>
-        <li><a href="Galeria.html">Galeria</a> </li>
-      </ul>
-    </nav>
-  </header>
-  <form action="Contacto">
-    <fieldset>
-      <legend>Datos</legend>
-      <label>Nombre <input type="text" name="nombre" placeholder="Nombre" /></label> 
-      <br>
-      <br>
-      <label>Ingresa tu Email <input type="email" name="email" placeholder="Tuemail@ejemplo.com" /></label> 
-      
 
-    </fieldset>
-    <br>
-    <br>
-    <br>
-    <fieldset>
-      <legend>Nos conociste por... </legend>
-      <select type="Nos conocio por..">
-        <option value="Facebook">Facebook</option>
-        <option value="Instagram">Instagram</option>
-        <option value="Otro">Otro</option>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <div class="container-fluid fluid1">
+      <a href="index.html" class="navbar-brand"><img src="imagenes/LOGOCALMA.jpg" alt="Logo" class="imgLogo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="menuham-container"><img src="imagenes/mhambu.png" alt="Logo" class="menuham"></div>
 
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Galeria.html">Galeria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Conocenos.html">Conocenos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Precio.html">Precio</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <form class="form-container">
+
+    <div class="form-group">
+      <label for="full_name_id" class="control-label">Nombre</label>
+      <input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="Nombre">
+    </div>
+
+    <div class="form-group">
+      <label for="street1_id" class="control-label">E-mail</label>
+      <input type="text" class="form-control" id="street1_id" name="street1" placeholder="E-mail">
+    </div>
+
+    <div class="form-group">
+      <label for="city_id" class="control-label">Ciudad</label>
+      <input type="text" class="form-control" id="city_id" name="city" placeholder="Tandil">
+    </div>
+
+    <div class="form-group">
+      <label for="street2_id" class="control-label">Direccion</label>
+      <input type="text" class="form-control" id="street2_id" name="street2" placeholder="Direccion">
+    </div>
+
+    <div class="form-group">
+      <label for="state_id" class="control-label">Donde nos Conociste</label>
+      <select class="form-control" id="state_id">
+        <option value="otro"></option>
+        <option value="Fb">Facebook</option>
+        <option value="Inst">Instagram</option>
+        <option value="otro">Otro</option>
       </select>
-    </fieldset>
-    <br>
-    <br>
-    <br>
-    <fieldset>
-      <legend>Novedades</legend>
-      <p> Desea recibir el Novedades <input type="checkbox" name="acepta" value="1"></p>
-      
-    </fieldset>
-    <br>
-    <br>
-    <br>
-    <fieldset>
-      <legend>Comentarios</legend>
-      <section>
-        <h4>Envianos tu comentario</h4>
+    </div>
 
-        <textarea rows="5" cols="30"></textarea><br>
+    <div class="form-group">
+      <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+      <div class="col-md-8">
+        <textarea class="form-control" id="message" name="message" placeholder="Escriba su mensaje" rows="7"></textarea>
+      </div>
+    </div>
 
-        <input type="submit" value="Enviar " />
-        <input type="reset" value="Limpiar" />
-      </section>
-    </fieldset>
+    <div class="form-group btn-contacto">
+      <div class="checkbox">
+        <label><input type="checkbox"> Suscribirse</label>
+      </div>
+      <button type="submit" class="btn btn-dark">Guardar</button>
+      <button type="clean" class="btn btn-dark">Limpiar</button>
+    </div>
+
   </form>
+
+
+
+
+  <!--Parte 5-->
   <footer class="footer">
-    <!--Parte 5-->
     <div class="redes">
       <span> Copyright © </span>
       <a href="https://www.instagram.com/calma.fotografia/" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.facebook.com/calmanewborn" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <p>calmafotografia@gmail.com.ar</p>
+      <i class="fas fa-envelope"></i>
     </div>
 
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
 
 </body>
