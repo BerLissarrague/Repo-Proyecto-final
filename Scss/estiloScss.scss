@@ -31,8 +31,10 @@ h3{
 body{
     width: auto;
     background-image: linear-gradient(to bottom, #e3c8c1, #caaba3,#885c5b);
-    min-height: 960px;    
+    background-size: cover;
+    background-attachment: fixed;
 }
+
 /*  Nav */
 
 .imgLogo{   
@@ -57,7 +59,7 @@ body{
     float: right;
     padding-right: 5%;
 }
-.navbar-expand-lg .navbar-collapse{
+.navbar-expand-sm .navbar-collapse{
     flex-direction: row-reverse;
     border: none;
 }
@@ -73,7 +75,7 @@ body{
     width: 100%;
 }
 .menuham{
-    width: 50px;
+    width: 40px;
  }
 
 /* Galeria*/
@@ -184,8 +186,7 @@ p{
     border: 3px solid ;
     border-collapse: collapse; 
     position: relative;
-    padding: 1%;
-    
+    padding: 1%;    
 } 
 th{
     @extend.tabla;
@@ -194,7 +195,7 @@ td{
     @extend.tabla;
 }  
 
-/*Pagi na de Contacto*/
+/*Pagina de Contacto*/
 .form-control{
     width: 80%;
 }
@@ -208,7 +209,7 @@ td{
 .d-block{      
     margin: 0 auto;
 }
-/* Pagina de Galeria */
+/* Pagina de Conocenos */
 .conteNosotros {
     margin:2% 4%;
 }

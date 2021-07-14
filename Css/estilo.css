@@ -27,7 +27,8 @@ h3 {
 body {
   width: auto;
   background-image: linear-gradient(to bottom, #e3c8c1, #caaba3, #885c5b);
-  min-height: 960px; }
+  background-size: cover;
+  background-attachment: fixed; }
 
 /*  Nav */
 .imgLogo {
@@ -52,7 +53,7 @@ body {
   float: right;
   padding-right: 5%; }
 
-.navbar-expand-lg .navbar-collapse {
+.navbar-expand-sm .navbar-collapse {
   flex-direction: row-reverse;
   border: none; }
 
@@ -68,7 +69,7 @@ body {
   width: 100%; }
 
 .menuham {
-  width: 50px; }
+  width: 40px; }
 
 /* Galeria*/
 .contGaleria {
@@ -164,7 +165,7 @@ body {
   position: relative;
   padding: 1%; }
 
-/*Pagi na de Contacto*/
+/*Pagina de Contacto*/
 .form-control {
   width: 80%; }
 
@@ -178,7 +179,7 @@ body {
 .d-block {
   margin: 0 auto; }
 
-/* Pagina de Galeria */
+/* Pagina de Conocenos */
 .conteNosotros {
   margin: 2% 4%; }
 
@@ -261,7 +262,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "embarazo recienNacido" " paisajismo institucional" "deportiva gastronomica";
+    grid-template-areas:" paisajismo institucional" "embarazo recienNacido"  "deportiva gastronomica";
     width: 85%;
     text-align: justify;
     font-size: 15px;
@@ -286,7 +287,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "embarazo recienNacido" " paisajismo institucional" "deportiva gastronomica";
+    grid-template-areas: "embarazo recienNacido" "deportiva gastronomica"" paisajismo institucional" ;
     width: 85%;
     text-align: justify;
     font-size: 15px;
