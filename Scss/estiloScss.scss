@@ -29,7 +29,7 @@ h3{
     margin: 0 auto;
     text-align: center;    
     text-transform:capitalize;
-    opacity: 50%;
+    opacity: 80%;
 }
 
 
@@ -56,11 +56,10 @@ body{
     color: #ffff;
     border: none;  
     padding-right: 5%;
-    float: right
+   
 }
 .navbar-light .navbar-nav .nav-link{
     color:#ffff;
-    float: right;
     padding-right: 5%;
 }
 .navbar-expand-sm .navbar-collapse{
@@ -149,7 +148,7 @@ body{
         width: 33%; 
         padding: 1%;
         margin: 2% auto;
-        border-radius: 2%; 
+        border-radius: 6%; 
     }
 }
     /*Mixin*/
@@ -174,16 +173,18 @@ body{
     justify-content: center;
     align-items: center ;
     
+    
     i{
-    padding: 10px;   
+    padding: 10px;
+    font-size: 30px; 
 }
     span{
     padding: 15px;
 }
     p{
     padding: 15px;
-} 
 }
+} 
 
 /*Pagina de Precios*/
 
@@ -206,10 +207,13 @@ td{
     color:#212529;
 }
 .form-control{
+    margin: 0 auto;
     width: 50%;
+    margin-bottom: 15px;
 }
 .form-container{
     padding: 2%
+    
 }
 /* Pagina de Galeria */
 .carousel{
@@ -278,11 +282,8 @@ td{
         
     }
     }   
-    .imagFondo{
-        border-radius: 7%;
-        width: 90%;
-          
-    }
+            
+    
     .fotoFondo{
         display: flex;
         flex-direction: column;
@@ -291,6 +292,7 @@ td{
         align-items: center;
         img{
             width: 80%;
+            border-radius: 7%;
         }   
     }
     .redes{
