@@ -10,7 +10,8 @@
   font-family: 'Heebo' , sans-serif;
   color: #ffff;
   text-decoration: none;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font: 1rem 'Heebo', sans-serif; }
 
 /* Encabezados */
 h1 {
@@ -84,10 +85,10 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 2%;
-  grid-row-gap: 2%;
+  grid-column-gap: 1%;
+  grid-row-gap: 1%;
   width: 90%;
-  margin: 4% auto 4% auto; }
+  margin: 2% auto; }
   .galeria img {
     border-radius: 2%;
     width: 100%;
@@ -145,6 +146,11 @@ body {
   margin: 0 auto; }
 
 /* Footer */
+.footer {
+  position: static;
+  background-color: #212529;
+  width: 100%; }
+
 .redes {
   display: flex;
   flex-direction: row;
@@ -162,24 +168,36 @@ body {
     padding: 15px; }
 
 /*Pagina de Precios*/
-.tabla, th, td {
+.tabla, .tabla th, .tabla td {
   text-align: center;
   border: 1px solid;
   border-collapse: collapse;
   position: relative;
-  padding: 1%; }
-
-/*Pagi na de Contacto*/
-.opciones {
-  color: #212529; }
+  padding: 1%;
+  /*Pagi na de Contacto*/ }
 
 .form-control {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: gray;
   margin: 0 auto;
   width: 50%;
   margin-bottom: 15px; }
 
+.opciones {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529; }
+
 .form-container {
   padding: 2%; }
+
+.btn-contacto {
+  text-align: center; }
+  .btn-contacto .buttom {
+    padding: 1%; }
 
 /* Pagina de Galeria */
 .carousel {
@@ -191,8 +209,28 @@ body {
   margin: 0 auto; }
 
 /* Pagina de conocenos */
-.fluid2 {
-  margin: 4%; }
+.conteConocenos {
+  font-size: 20px;
+  margin: 3%; }
+
+.info2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 95%;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.5em;
+  margin: 0 auto; }
+
+.info2 p {
+  margin: 2rem;
+  text-align: left; }
+
+.fotosconocenos {
+  width: 95%;
+  margin: 2rem;
+  padding: 1%;
+  border-radius: 4%; }
 
 /* Medias Query*/
 @media only screen and (max-width: 600px) {
@@ -294,7 +332,9 @@ body {
     flex-direction: column;
     width: 95%;
     justify-content: space-between;
-    align-items: center; } }
+    align-items: center; }
+  .form-control {
+    width: 100%; } }
 
 @media only screen and (min-width: 780px) and (max-width: 992px) {
   .info {
@@ -309,7 +349,9 @@ body {
     margin: 3rem; }
     .info p {
       margin: 1rem;
-      text-align: justify; } }
+      text-align: justify; }
+  .form-control {
+    width: 100%; } }
 
 @media only screen and (min-width: 992px) {
   .imagFondo img:hover {
