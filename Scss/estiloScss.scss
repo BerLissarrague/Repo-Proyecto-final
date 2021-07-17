@@ -12,7 +12,6 @@
     color:#ffff;
     text-decoration: none;  
     box-sizing: border-box; 
-    font: 1rem 'Heebo', sans-serif;
 }
 /* Encabezados */
 h1{
@@ -25,23 +24,18 @@ h2{
     text-transform: uppercase;
     margin: 2%; 
 }
-
 h3{
     margin: 0 auto;
     text-align: center;    
     text-transform:capitalize;
     opacity: 80%;
 }
-
-
-body{
-    
+body{    
     background-image: linear-gradient(to bottom, #e3c8c1, #caaba3,#885c5b);
     background-attachment: fixed;
     background-size: cover;
 }
 /*  Nav */
-
 .imgLogo{   
     width: 90px;
     height: 90px;
@@ -57,11 +51,13 @@ body{
     color: #ffff;
     border: none;  
     padding-right: 5%;
-   
 }
 .navbar-light .navbar-nav .nav-link{
     color:#ffff;
     padding-right: 5%;
+}
+.navbar-nav {
+    float: right;
 }
 .navbar-expand-sm .navbar-collapse{
     flex-direction: row-reverse;
@@ -81,43 +77,40 @@ body{
 .menuham{
     width: 40px;
  }
-
 /* Galeria*/
-
-.contGaleria{   
+.contGaleria {   
     height:$ancho;
     margin: 3rem;
     margin-top: 0%;
     margin-bottom: 2%;
 }
-.galeria{
+.galeria {
     display: $grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 1%;
-    grid-row-gap: 1%;
+    grid-column-gap: 2%;
+    grid-row-gap: 2%;
     width: $ancho;
-    margin: 2% auto;
- img{
-     border-radius: 2%;
+    margin: 4% auto 4% auto;
+ img {
+    border-radius: 8px;
     width: 100%;
     height: 100%;   
+    }
 }
-}
-
 /* Especialidades*/ 
-
-.info{
+.info {
     display: $grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "embarazo recienNacido paisajismo""institucional deportiva gastronomica";
+    grid-template-areas: "embarazo recienNacido institucional""paisajismo deportiva gastronomica";
     width: 85%;
     text-align: center;
     font-size: 20px;
     line-height: 1.5em; 
     margin: 0 auto;
-    p{ margin: 2rem;
+    p { 
+      margin: 2rem;
       text-align: left;
     }
 }
@@ -139,8 +132,6 @@ body{
 .gastronomia{
     grid-area:gastronomica;
 }
-
-
 /* imagenes pie de pagina*/
 .imagFondo{
     width: 90%;
@@ -149,7 +140,7 @@ body{
         width: 33%; 
         padding: 1%;
         margin: 2% auto;
-        border-radius: 6%; 
+        border-radius: 20px; 
     }
 }
     /*Mixin*/
@@ -157,83 +148,91 @@ body{
     display: $flex;
     flex-direction: $fila;
     width: $ancho;
- }
- .fotoFondo{
-     @include uno(flex,row,90% );
-     justify-content:space-between;    
-     margin:0 auto;    
 }
-
-
-/* Footer */           
+.fotoFondo {
+    @include uno(flex,row,90% );
+    justify-content:space-between;    
+    margin:0 auto;    
+}
+/* Footer */
 .footer{
-    position:static;
-    background-color: #212529;
+    padding: 10px;
     width: 100%;
+    background-color: #212529;
+    height: max-content;
 }
-
 .redes{
-   @include uno(flex,row,100%);
+   @include uno(flex,row, 100%);
     flex-wrap: nowrap;
-    padding: 20px;
+    padding: 40px;
     justify-content: center;
-    align-items: center ;
-      
-    i{
+    align-items: center ;    
+    i {
     padding: 10px;
     font-size: 30px; 
-}
-    span{
+    }
+    span {
     padding: 15px;
-}
+    }
     p{
     padding: 15px;
-}
+    }
 } 
 
 /*Pagina de Precios*/
-
-.tabla{    
+.table{    
     text-align: center;
     border: 1px solid ;
     border-collapse: collapse; 
     position: relative;
     padding: 1%;
-    
-
-
+    width: 90%;
+    margin: 0 auto;
+}        
 th{
-    @extend.tabla;
+    text-align: center;
+    border: 1px solid ;
+    border-collapse: collapse; 
+    position: relative;
+    padding: 1%;
 }
 td{
-    @extend.tabla;
-} 
-
+    text-align: center;
+    border: 1px solid ;
+    border-collapse: collapse; 
+    position: relative;
+    padding: 1%;
+}  
 
 /*Pagi na de Contacto*/
+.form-container{
+    padding: 2%    
+}
+.form-groupContacto{
+    margin: auto;
+   width: 70%;
+} 
+.form-groupContacto label{
+    padding-bottom: 5px;
 }
 .form-control{
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: gray;
-    margin: 0 auto;
-    width: 50%;
+    margin: auto;  
     margin-bottom: 15px;
 }
-
 .opciones{
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color:#212529;
 }
-
-.form-container{
-    padding: 2%
-    
+.suscribirse-checkbox{
+    padding-bottom: 5px;
 }
-.btn-contacto{
+.btn-contacto {
     text-align: center;
     .buttom{
         padding: 1%;
@@ -242,42 +241,42 @@ td{
 /* Pagina de Galeria */
 .carousel{
     padding: 2%;
- img{
-    border-radius: 2%;
+    img {
+       border-radius: 10px;
+    }
 }
-}
-.d-block{      
+.d-block {      
     margin: 0 auto;
 }
 /* Pagina de conocenos */
-.conteConocenos{
-    font-size: 20px;
-    margin: 3%;
-  }
-  .info2 {
-    display: grid;
+.conteconocenos {
+    width: 90%;
+    margin: 0 auto;
+    p { 
+        font-size: 20px;
+        margin: 2rem;
+        text-align: justify;
+    }
+}
+.infoconocenos{
+    display: $grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 95%;
+    grid-template-rows: 1;
+    grid-template-areas: "embarazo recienNacido institucional";
+    width: 90%;
     text-align: center;
     font-size: 20px;
-    line-height: 1.5em;
-    margin: 0 auto; }
-    .info2 p {
-      margin: 2rem;
-      text-align: left; }
-
-.fotosconocenos{
-    width: 95%;
-    margin: 2rem;
-    padding: 1%;
-    border-radius: 4%; 
-}
-
-  
+    line-height: 1.5em; 
+    margin: 0 auto;
+    p { 
+        margin: 2rem;
+        text-align: left;
+    }
+    }
 
 /* Medias Query*/
 @media only screen and (max-width: 600px){
-    h2{
+    h2 {
         font-size: 20px;
         height: 100%;
         width: 90%;
@@ -285,51 +284,44 @@ td{
         text-transform: uppercase;
         margin-top: 5%;
     }
-    h3{
+    h3 {
         width: 90%;
         text-align: center;
         margin-top: 2%;
         font-size: 16px; 
     }
-    form{
-        font-size: 16px;  
-    }
+    
     p{
         font-size: 13px;  
-    }
-    
-    .contGaleria{   
+    }    
+    .contGaleria {   
         height:95%;       
         margin-top: 0%;
         margin-bottom: 0%;
     }
-    .galeria{
+    .galeria {
         display: flex;
         flex-direction: column;
         width: 100%;
         justify-content: center;        
         margin-bottom: 5%;
-    img{
-        border-radius: 7%;
-        padding: 2%;
+        img {
+            border-radius: 10px;
+            padding: 2%;
+        }
     }
-    }
-    .info{
+    .info {
         display: flex;
         flex-direction: column ;
         width: 80%;
         text-align: justify;        
-        line-height: 1.5em; 
-      
+        line-height: 1.5em;      
     p{
         margin: 1rem;
-        text-align: justify;
-        
+        text-align: justify;        
     }
-    }   
-            
-    
-    .fotoFondo{
+    }    
+    .fotoFondo {
         display: flex;
         flex-direction: column;
         width: 90%;
@@ -337,7 +329,7 @@ td{
         align-items: center;
         img{
             width: 80%;
-            border-radius: 7%;
+            border-radius: 10px;
         }   
     }
     .redes{
@@ -346,28 +338,71 @@ td{
         flex-wrap: nowrap;        
         justify-content: center;       
         width: 90%;
-        margin: 1rem;
-    
-        
-    i{
-        padding: 5px;   
-    }        
-    span{
-        padding: 7px;        
-    } 
-    p{
-        padding: 7px;        
-    } 
-    } 
-    .table{
-        font-size: 9px;
+        margin: 1rem;       
+        i {
+            padding: 5px;   
+        }        
+        span {
+            padding: 7px;        
+        } 
+        p {
+            padding: 7px;        
+        }
+    }  
+    /*Pagina Tablas*/   
+    .table{ 
+        margin: 0 auto;
+        width: 80%;
+        font-size: 11px;
+    }
+    /*Pagina Contacto*/
+    form {
+        font-size: 16px;  
     }
     .form-control{
         width: 100%;
     }
+    .form-group {
+        text-align: center;
+    }
+    /* Pagina Conocenos*/
+    .conteconocenos {  
+        width: 80%;
+        margin: auto;         
+        p{
+            margin: 1rem;
+            text-align: justify;
+            font-size: 13px;
+            line-height: 2.5em;          
+        }
+
+    }
+    .infoconocenos {
+        
+        display: flex;
+        flex-direction: column ;
+        width: 80%;
+        text-align: justify;        
+        line-height: 1.5em;      
+    p{
+        margin: 1rem;
+        text-align: justify;        
+    }
+    }
+    .fotoFondoconocenos {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        img {
+            width: 95%;
+            border-radius: 5px;
+        }   
+    }
 }
-@media only screen and (min-width: 600px) and (max-width: 780px) { 
-               
+@media only screen and (min-width: 600px) and (max-width: 780px) {               
     .galeria{
         display: flex;
         flex-direction: column;
@@ -377,7 +412,7 @@ td{
     img{
         border-radius: 7%;
         padding: 2%;
-    }
+        }
     }
     .info{
         display: grid;
@@ -389,15 +424,15 @@ td{
         font-size: 15px;
         line-height: 1.5em; 
         margin: 3rem;
-        p{
-        margin: 1rem;
-        text-align: justify;
-    }
-    }
+        p {
+            margin: 1rem;
+            text-align: justify;
+        }
+    }    
     .imagFondo{
         width: 90%;
         img{ 
-            border-radius: 7%;
+            border-radius: 10px;
             width: 85%;
         }
     }
@@ -408,10 +443,16 @@ td{
         justify-content: space-between;
         align-items: center;   
     }
-    .form-control{
-        width: 100%;
-    }
-  
+    .fotoFondoconocenos {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        justify-content: space-between;
+        align-items: center; 
+        img {
+            width: 95%;
+        }     
+    }  
 }     
 @media only screen and (min-width: 780px) and (max-width: 992px){
     .info{
@@ -424,18 +465,13 @@ td{
         font-size: 15px;
         line-height: 1.5em; 
         margin: 3rem;
-        p{
-        margin: 1rem;
-        text-align: justify;
+        p {
+           margin: 1rem;
+           text-align: justify;
+        }
     }
-    }
-    .form-control{
-        width: 100%;
-    }
-  
 }
 @media only screen and (min-width: 992px) {
- 
    .imagFondo img:hover{
         transform: scale(1.2);
         transition: all 1s;
