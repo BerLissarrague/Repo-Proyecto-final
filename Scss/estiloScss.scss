@@ -8,7 +8,7 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start:0;
-    font-family: 'Heebo' , sans-serif;
+    font-family: 'Indie Flower', cursive;
     color:#ffff;
     text-decoration: none;  
     box-sizing: border-box; 
@@ -16,6 +16,8 @@
 /* Encabezados */
 h1{
     margin: 0 auto;
+    margin-top: 1%;
+    margin-bottom: 2%;
     text-align: center;    
     text-transform:capitalize;
 }
@@ -44,17 +46,21 @@ body{
     padding-right: 3%;
 }
 .navbar{
+    font-size: x-large;
     background-color: #e4c9c4; 
     margin-bottom: 5px;
 }
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show.nav-link {
+    
     color: #ffff;
     border: none;  
     padding-right: 5%;
 }
 .navbar-light .navbar-nav .nav-link{
     color:#ffff;
-    padding-right: 5%;
+    padding-right: 3%;
+    margin: 3px;
+    text-align: right;
 }
 .navbar-nav {
     float: right;
@@ -88,10 +94,10 @@ body{
     display: $grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 2%;
-    grid-row-gap: 2%;
+    grid-column-gap: 1%;
+    grid-row-gap: 1%;
     width: $ancho;
-    margin: 4% auto 4% auto;
+    margin: 4% auto;
  img {
     border-radius: 8px;
     width: 100%;
@@ -110,7 +116,7 @@ body{
     line-height: 1.5em; 
     margin: 0 auto;
     p { 
-      margin: 2rem;
+      margin: 2%;
       text-align: left;
     }
 }
@@ -135,7 +141,7 @@ body{
 /* imagenes pie de pagina*/
 .imagFondo{
     width: 90%;
-    margin: 2% auto;
+    margin: 0 auto;
     img{
         width: 33%; 
         padding: 1%;
@@ -150,7 +156,7 @@ body{
     width: $ancho;
 }
 .fotoFondo {
-    @include uno(flex,row,90% );
+    @include uno(flex,row,95% );
     justify-content:space-between;    
     margin:0 auto;    
 }
@@ -164,7 +170,7 @@ body{
 .redes{
    @include uno(flex,row, 100%);
     flex-wrap: nowrap;
-    padding: 40px;
+   // padding: 30px;
     justify-content: center;
     align-items: center ;    
     i {
@@ -173,6 +179,7 @@ body{
     }
     span {
     padding: 15px;
+    font-size: 20px;
     }
     p{
     padding: 15px;
@@ -180,14 +187,19 @@ body{
 } 
 
 /*Pagina de Precios*/
-.table{    
+.table{   
+    font-size: 27px; 
     text-align: center;
     border: 1px solid ;
     border-collapse: collapse; 
     position: relative;
     padding: 1%;
-    width: 90%;
+    width: 88%;
     margin: 0 auto;
+    dl, ol, ul { 
+        margin-bottom: 0%;
+        padding-left: 0;
+    }
 }        
 th{
     text-align: center;
@@ -195,6 +207,7 @@ th{
     border-collapse: collapse; 
     position: relative;
     padding: 1%;
+    align-items: center ;
 }
 td{
     text-align: center;
@@ -204,7 +217,7 @@ td{
     padding: 1%;
 }  
 
-/*Pagi na de Contacto*/
+/*Pagina de Contacto*/
 .form-container{
     padding: 2%    
 }
@@ -254,14 +267,13 @@ td{
     margin: 0 auto;
     p { 
         font-size: 20px;
-        margin: 2rem;
+        margin: 2%;
         text-align: justify;
     }
 }
 .infoconocenos{
     display: $grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1;
     grid-template-areas: "embarazo recienNacido institucional";
     width: 90%;
     text-align: center;
@@ -269,14 +281,18 @@ td{
     line-height: 1.5em; 
     margin: 0 auto;
     p { 
-        margin: 2rem;
-        text-align: left;
+        margin: 2%;
+        text-align: justify;
     }
-    }
-
+}
+.fotoFondoconocenos {
+    @include uno(flex,row,100% );
+    justify-content:space-between;    
+    margin:0 auto;
+}
 /* Medias Query*/
 @media only screen and (max-width: 600px){
-    h2 {
+    h2{
         font-size: 20px;
         height: 100%;
         width: 90%;
@@ -328,7 +344,7 @@ td{
         justify-content: center;
         align-items: center;
         img{
-            width: 80%;
+            width: 90%;
             border-radius: 10px;
         }   
     }
@@ -352,12 +368,12 @@ td{
     /*Pagina Tablas*/   
     .table{ 
         margin: 0 auto;
-        width: 80%;
-        font-size: 11px;
+        width: 78%;
+        font-size: 14px;
     }
     /*Pagina Contacto*/
     form {
-        font-size: 16px;  
+        font-size: 14px;  
     }
     .form-control{
         width: 100%;
@@ -368,37 +384,37 @@ td{
     /* Pagina Conocenos*/
     .conteconocenos {  
         width: 80%;
-        margin: auto;         
+        margin: 0 auto;         
         p{
-            margin: 1rem;
+            font-size: 14px;
+            margin:0 auto;
             text-align: justify;
-            font-size: 13px;
-            line-height: 2.5em;          
+            font-size: 14px;
+            line-height: 1.5em;          
         }
 
     }
-    .infoconocenos {
-        
+    .infoconocenos {    
+        font-size: 14px;    
         display: flex;
         flex-direction: column ;
         width: 80%;
         text-align: justify;        
         line-height: 1.5em;      
     p{
-        margin: 1rem;
+        margin: 2% auto;
         text-align: justify;        
     }
     }
     .fotoFondoconocenos {
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 100%;
         justify-content: center;
         align-items: center;
-        margin: 0 auto;
         img {
-            width: 95%;
-            border-radius: 5px;
+            width: 90%;
+            border-radius: 10px;
         }   
     }
 }
@@ -440,19 +456,25 @@ td{
         display: flex;
         flex-direction: column;
         width: 95%;
-        justify-content: space-between;
         align-items: center;   
     }
     .fotoFondoconocenos {
         display: flex;
         flex-direction: column;
-        width: 95%;
-        justify-content: space-between;
-        align-items: center; 
-        img {
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        img{
             width: 95%;
-        }     
-    }  
+            border-radius: 10px;
+        }   
+    }
+    .table {
+        width: 75%;
+        font-size: 16px;
+    }
+   
+
 }     
 @media only screen and (min-width: 780px) and (max-width: 992px){
     .info{
